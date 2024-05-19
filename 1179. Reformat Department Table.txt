@@ -1,0 +1,17 @@
+# Write your MySQL query statement below
+select dept.id, jan.revenue as Jan_Revenue, feb.revenue as Feb_Revenue, mar.revenue as Mar_Revenue, apr.revenue as Apr_Revenue, may.revenue as May_Revenue, jun.revenue as Jun_Revenue, jul.revenue as Jul_Revenue, aug.revenue as Aug_Revenue, sep.revenue as Sep_Revenue, oct.revenue as Oct_Revenue, nov.revenue as Nov_Revenue, decm.revenue as Dec_Revenue
+from department as dept
+left join department as jan on dept.id = jan.id and jan.month = 'jan'
+left join department as feb on dept.id = feb.id and feb.month = 'feb'
+left join department as mar on dept.id = mar.id and mar.month = 'mar'
+left join department as apr on dept.id = apr.id and apr.month = 'apr'
+left join department as may on dept.id = may.id and may.month = 'may'
+left join department as jun on dept.id = jun.id and jun.month = 'jun'
+left join department as jul on dept.id = jul.id and jul.month = 'jul'
+left join department as aug on dept.id = aug.id and aug.month = 'aug'
+left join department as sep on dept.id = sep.id and sep.month = 'sep'
+left join department as oct on dept.id = oct.id and oct.month = 'oct'
+left join department as nov on dept.id = nov.id and nov.month = 'nov'
+left join department as decm on dept.id = decm.id and decm.month = 'dec'
+group by dept.id
+order by dept.id;
