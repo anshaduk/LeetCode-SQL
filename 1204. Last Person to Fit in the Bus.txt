@@ -1,0 +1,1 @@
+select person_name from (select person_name,weight,sum(weight) over (order by turn) as weight_total from queue) as total where weight_total<=1000 order by weight_total desc limit 1;
